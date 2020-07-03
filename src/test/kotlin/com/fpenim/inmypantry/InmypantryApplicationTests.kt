@@ -1,4 +1,4 @@
-package com.swarmbit.inmypantry
+package com.fpenim.inmypantry
 
 import org.junit.jupiter.api.Test
 import org.springframework.boot.test.context.SpringBootTest

@@ -1,4 +1,4 @@
-package com.swarmbit.inmypantry
+package com.fpenim.inmypantry
 
 import org.springframework.boot.autoconfigure.SpringBootApplication
 import org.springframework.boot.runApplication

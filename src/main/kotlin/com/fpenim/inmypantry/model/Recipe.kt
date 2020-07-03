@@ -1,4 +1,4 @@
-package com.swarmbit.inmypantry.model
+package com.fpenim.inmypantry.model
 
 import javax.measure.Quantity
 

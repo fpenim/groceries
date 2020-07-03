@@ -1,6 +1,6 @@
-package com.swarmbit.inmypantry.services
+package com.fpenim.inmypantry.services
 
-import com.swarmbit.inmypantry.model.Recipe
+import com.fpenim.inmypantry.model.Recipe
 import javax.measure.Quantity
 
 class ShoppingListService {

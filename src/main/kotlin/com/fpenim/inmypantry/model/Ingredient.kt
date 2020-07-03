@@ -1,4 +1,4 @@
-package com.swarmbit.inmypantry.model
+package com.fpenim.inmypantry.model
 
 data class Ingredient(
         val name: String,

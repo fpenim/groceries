@@ -1,9 +1,9 @@
-package com.swarmbit.inmypantry.services
+package com.fpenim.inmypantry.services
 
 
-import com.swarmbit.inmypantry.RecipesHelper.cream
-import com.swarmbit.inmypantry.RecipesHelper.pastaCarbonara
-import com.swarmbit.inmypantry.RecipesHelper.spaghettiGamberini
+import com.fpenim.inmypantry.RecipesHelper.cream
+import com.fpenim.inmypantry.RecipesHelper.pastaCarbonara
+import com.fpenim.inmypantry.RecipesHelper.spaghettiGamberini
 import org.junit.jupiter.api.Assertions.assertEquals
 import org.junit.jupiter.api.Test
 

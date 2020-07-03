@@ -1,7 +1,7 @@
-package com.swarmbit.inmypantry
+package com.fpenim.inmypantry
 
-import com.swarmbit.inmypantry.model.Ingredient
-import com.swarmbit.inmypantry.model.Recipe
+import com.fpenim.inmypantry.model.Ingredient
+import com.fpenim.inmypantry.model.Recipe
 import tec.units.ri.AbstractUnit.ONE
 import tec.units.ri.quantity.Quantities
 import tec.units.ri.unit.Units.GRAM
