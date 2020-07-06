@@ -1,3 +1,2 @@
-#In My Pantry
-
-TBC
+# Groceries
+_Grocery shopping made simple_

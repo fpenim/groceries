@@ -1,4 +1,4 @@
-package com.fpenim.inmypantry
+package com.fpenim.groceries
 
 import org.springframework.boot.autoconfigure.SpringBootApplication
 import org.springframework.boot.runApplication

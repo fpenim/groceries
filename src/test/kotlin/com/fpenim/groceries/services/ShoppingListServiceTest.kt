@@ -1,9 +1,9 @@
-package com.fpenim.inmypantry.services
+package com.fpenim.groceries.services
 
 
-import com.fpenim.inmypantry.RecipesHelper.cream
-import com.fpenim.inmypantry.RecipesHelper.pastaCarbonara
-import com.fpenim.inmypantry.RecipesHelper.spaghettiGamberini
+import com.fpenim.groceries.RecipesHelper.cream
+import com.fpenim.groceries.RecipesHelper.pastaCarbonara
+import com.fpenim.groceries.RecipesHelper.spaghettiGamberini
 import org.junit.jupiter.api.Assertions.assertEquals
 import org.junit.jupiter.api.Test
 

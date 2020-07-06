@@ -1,6 +1,6 @@
-package com.fpenim.inmypantry.services
+package com.fpenim.groceries.services
 
-import com.fpenim.inmypantry.model.Recipe
+import com.fpenim.groceries.model.Recipe
 import javax.measure.Quantity
 
 class ShoppingListService {

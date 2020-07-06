@@ -1,4 +1,4 @@
-package com.fpenim.inmypantry.model
+package com.fpenim.groceries.model
 
 data class Ingredient(
         val name: String,
