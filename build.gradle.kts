@@ -7,8 +7,8 @@ plugins {
 	kotlin("plugin.spring") version "1.3.72"
 }
 
-group = "com.swarmbit"
-version = "0.0.1-SNAPSHOT"
+group = "com.fpenim"
+version = "1.0.0-SNAPSHOT"
 java.sourceCompatibility = JavaVersion.VERSION_1_8
 
 repositories {
@@ -22,9 +22,6 @@ dependencies {
 	implementation("com.fasterxml.jackson.module:jackson-module-kotlin")
 	implementation("org.jetbrains.kotlin:kotlin-reflect")
 	implementation("org.jetbrains.kotlin:kotlin-stdlib-jdk8")
-
-	implementation(group = "javax.measure", name = "unit-api", version = "1.0")
-	implementation(group = "tec.units", name = "unit-ri", version = "1.0.3")
 
 	testImplementation("org.springframework.boot:spring-boot-starter-test") {
 		exclude(group = "org.junit.vintage", module = "junit-vintage-engine")

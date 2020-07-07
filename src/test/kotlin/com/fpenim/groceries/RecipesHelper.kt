@@ -1,12 +1,11 @@
 package com.fpenim.groceries
 
+import com.fpenim.groceries.model.Count
 import com.fpenim.groceries.model.Ingredient
+import com.fpenim.groceries.model.Mass
+import com.fpenim.groceries.model.Quantity
 import com.fpenim.groceries.model.Recipe
-import tec.units.ri.AbstractUnit.ONE
-import tec.units.ri.quantity.Quantities
-import tec.units.ri.unit.Units.GRAM
-import tec.units.ri.unit.Units.LITRE
-
+import com.fpenim.groceries.model.Volume
 
 object RecipesHelper {
 
@@ -22,9 +21,9 @@ object RecipesHelper {
             name = "Pasta Carbonara",
             portions = 2,
             ingredients = mutableMapOf(
-                    tagliatelle to Quantities.getQuantity(180, GRAM),
-                    cream to Quantities.getQuantity(0.2, LITRE),
-                    bacon to Quantities.getQuantity(100, GRAM)
+                    tagliatelle to Quantity(180.0, Mass.GRAM),
+                    cream to Quantity(200.0, Volume.MILLILITRE),
+                    bacon to Quantity(100.0, Mass.GRAM)
             )
     )
 
@@ -32,11 +31,11 @@ object RecipesHelper {
             name = "Spaghetti Gamberini",
             portions = 4,
             ingredients = mutableMapOf(
-                    spaghetti to Quantities.getQuantity(180, GRAM),
-                    cookedShrimp to Quantities.getQuantity(400, GRAM),
-                    cream to Quantities.getQuantity(0.05, LITRE),
-                    oliveOil to Quantities.getQuantity(0.03, LITRE),
-                    garlic to Quantities.getQuantity(2, ONE)
+                    spaghetti to Quantity(180.0, Mass.GRAM),
+                    cookedShrimp to Quantity(0.4, Mass.KILOGRAM),
+                    cream to Quantity(50.0, Volume.MILLILITRE),
+                    oliveOil to Quantity(30.0, Volume.MILLILITRE),
+                    garlic to Quantity(2.0, Count.COUNT)
             )
     )
 }
