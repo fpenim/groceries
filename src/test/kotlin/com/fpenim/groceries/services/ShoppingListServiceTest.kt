@@ -7,6 +7,7 @@ import com.fpenim.groceries.RecipesHelper.cream
 import com.fpenim.groceries.RecipesHelper.garlic
 import com.fpenim.groceries.RecipesHelper.oliveOil
 import com.fpenim.groceries.RecipesHelper.pastaCarbonara
+import com.fpenim.groceries.RecipesHelper.quiche
 import com.fpenim.groceries.RecipesHelper.spaghetti
 import com.fpenim.groceries.RecipesHelper.spaghettiGamberini
 import com.fpenim.groceries.RecipesHelper.tagliatelle
@@ -45,9 +46,9 @@ class ShoppingListServiceTest {
 
         assertEquals(3, shoppingList.size)
 
-        assertEquals(Quantity(0.18, Mass.KILOGRAM), shoppingList.find { it.first == tagliatelle.name }?.second)
-        assertEquals(Quantity(0.2, Volume.LITRE), shoppingList.find { it.first == cream.name }?.second)
-        assertEquals(Quantity(0.1, Mass.KILOGRAM), shoppingList.find { it.first == bacon.name }?.second)
+        assertEquals(Quantity(0.18, Mass.KILOGRAM), shoppingList.find { it.first == tagliatelle.name }?.second?.first())
+        assertEquals(Quantity(0.2, Volume.LITRE), shoppingList.find { it.first == cream.name }?.second?.first())
+        assertEquals(Quantity(0.1, Mass.KILOGRAM), shoppingList.find { it.first == bacon.name }?.second?.first())
     }
 
     @Test
@@ -56,12 +57,28 @@ class ShoppingListServiceTest {
 
         assertEquals(7, shoppingList.size)
 
-        assertEquals(Quantity(0.18, Mass.KILOGRAM), shoppingList.find { it.first == tagliatelle.name }?.second)
-        assertEquals(Quantity(0.25, Volume.LITRE), shoppingList.find { it.first == cream.name }?.second)
-        assertEquals(Quantity(0.1, Mass.KILOGRAM), shoppingList.find { it.first == bacon.name }?.second)
-        assertEquals(Quantity(0.18, Mass.KILOGRAM), shoppingList.find { it.first == spaghetti.name }?.second)
-        assertEquals(Quantity(0.4, Mass.KILOGRAM), shoppingList.find { it.first == cookedShrimp.name }?.second)
-        assertEquals(Quantity(0.03, Volume.LITRE), shoppingList.find { it.first == oliveOil.name }?.second)
-        assertEquals(Quantity(2.0, Count.COUNT), shoppingList.find { it.first == garlic.name }?.second)
+        assertEquals(Quantity(0.18, Mass.KILOGRAM), shoppingList.find { it.first == tagliatelle.name }?.second?.first())
+        assertEquals(Quantity(0.25, Volume.LITRE), shoppingList.find { it.first == cream.name }?.second?.first())
+        assertEquals(Quantity(0.1, Mass.KILOGRAM), shoppingList.find { it.first == bacon.name }?.second?.first())
+        assertEquals(Quantity(0.18, Mass.KILOGRAM), shoppingList.find { it.first == spaghetti.name }?.second?.first())
+        assertEquals(Quantity(0.4, Mass.KILOGRAM), shoppingList.find { it.first == cookedShrimp.name }?.second?.first())
+        assertEquals(Quantity(0.03, Volume.LITRE), shoppingList.find { it.first == oliveOil.name }?.second?.first())
+        assertEquals(Quantity(2.0, Count.COUNT), shoppingList.find { it.first == garlic.name }?.second?.first())
+    }
+
+    @Test
+    internal fun getShoppingListFromThreeRecipes() {
+        val shoppingList = service.getShoppingList(listOf(pastaCarbonara, spaghettiGamberini, quiche))
+
+        assertEquals(7, shoppingList.size)
+
+        assertEquals(Quantity(0.18, Mass.KILOGRAM), shoppingList.find { it.first == tagliatelle.name }?.second?.first())
+        assertEquals(Quantity(0.45, Volume.LITRE), shoppingList.find { it.first == cream.name }?.second?.first())
+        assertEquals(Quantity(0.18, Mass.KILOGRAM), shoppingList.find { it.first == spaghetti.name }?.second?.first())
+        assertEquals(Quantity(0.4, Mass.KILOGRAM), shoppingList.find { it.first == cookedShrimp.name }?.second?.first())
+        assertEquals(Quantity(0.03, Volume.LITRE), shoppingList.find { it.first == oliveOil.name }?.second?.first())
+        assertEquals(Quantity(2.0, Count.COUNT), shoppingList.find { it.first == garlic.name }?.second?.first())
+
+        assertEquals(2, shoppingList.find { it.first == bacon.name }?.second?.size)
     }
 }

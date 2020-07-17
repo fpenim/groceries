@@ -42,3 +42,30 @@ fun MutableList<Quantity>.sum(): Quantity {
 
     return Quantity(sum, unit)
 }
+
+fun List<Quantity>.splitByMetricUnit(): List<MutableList<Quantity>> {
+
+    val listsOfQuantities = mutableListOf<MutableList<Quantity>>()
+
+    if (this.isEmpty()) {
+        return listsOfQuantities
+    }
+
+    val volumes = mutableListOf<Quantity>()
+    val masses = mutableListOf<Quantity>()
+    val counts = mutableListOf<Quantity>()
+
+    this.forEach { q ->
+        when(q.unit) {
+            is Volume -> volumes.add(q)
+            is Mass -> masses.add(q)
+            is Count -> counts.add(q)
+        }
+    }
+
+    listsOfQuantities.addAll(
+            listOf(volumes, masses,counts).filter { it.isNotEmpty() }
+    )
+
+    return listsOfQuantities
+}

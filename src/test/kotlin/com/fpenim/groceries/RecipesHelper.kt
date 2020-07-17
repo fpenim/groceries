@@ -38,4 +38,13 @@ object RecipesHelper {
                     garlic to Quantity(2.0, Count.COUNT)
             )
     )
+
+    internal val quiche = Recipe(
+            name = "Quiche",
+            portions = 2,
+            ingredients = mutableMapOf(
+                    cream to Quantity(200.0, Volume.MILLILITRE),
+                    bacon to Quantity(2.0, Count.COUNT)
+            )
+    )
 }
